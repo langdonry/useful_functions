@@ -3,7 +3,7 @@
 # within a vector can sum to a given number                         
 
 ## Current issues ----
-# 2024/06/22: Can't handle duplicates in the vector
+# 2024/06/22: None
 
 ## Set working directory ----
 setwd("~")
@@ -21,7 +21,7 @@ sum_to_value <- function(numbers, target_value){
   
   for (i in 2:length(numbers)) {
     
-    calc_combinations <- combinations(v = numbers, n = length(numbers), r = i)
+    calc_combinations <- combinations(v = numbers, n = length(numbers), r = i, set = F)
     calc_combinations <- calc_combinations[rowSums(calc_combinations) == target_value, ]
     
     if (!is_empty(calc_combinations)) {
@@ -40,4 +40,4 @@ sum_to_value <- function(numbers, target_value){
 }
 
 ## Test function ----
-sum_to_value(numbers = c(1,2,3,5,6,7,9), target_value = 15)
+sum_to_value(numbers = c(1,2,3,5,6,7,9,1), target_value = 15)
