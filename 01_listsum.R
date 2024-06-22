@@ -31,7 +31,7 @@ sum_to_value <- function(numbers, target_value){
       
     } else {
       
-      message(paste0("no combinations of ", i,  " numbers"))
+      message(paste0("no combinations of ", i, " numbers"))
       
     }
     
